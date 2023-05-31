@@ -1,0 +1,24 @@
+package parcial;
+
+
+public class Ruta {
+
+    String  consultarEstacion;
+   
+    String sitiodeVotacion( String ruta)
+    {
+       
+        if (ruta.startsWith("1"))
+               
+                {
+                   consultarEstacion= "el salitre";
+                   
+                }
+        else {
+            consultarEstacion= "Soacha";
+        }
+
+        return consultarEstacion;
+    }
+   
+}
