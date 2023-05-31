@@ -1,0 +1,19 @@
+package parcial;
+
+import java.awt.Menu;
+import java.util.Scanner;
+
+
+public class Destino {
+   
+  public static void main(String[] args) {
+       
+        System.out.println ("Por favor introduzca la ruta que desea realizar");
+     
+         Parciall Parciall = new Parciall();
+ 
+         Parciall.menu();
+       
+    }
+ 
+}
