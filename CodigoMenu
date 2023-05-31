@@ -1,0 +1,51 @@
+package parcial;
+
+import java.util.Scanner;
+
+public class Parcial1 {
+int selection;
+String LugarDeEstacion;
+private Scanner input = new Scanner(System.in);
+
+public void menu(){
+
+System.out.println("--Bienvenido por favor seleccione su opcion--");
+ System.out.println(
+        "Nuestro menu: \n" +
+        "  1) Consultar lugar de estacion\n" +
+        "  2) Consultar lugar de estacion con horario extendido \n" );
+    int selection = input.nextInt();
+    input.nextInt();
+
+    switch (selection) {
+            case 1:
+              consultarEstacion();
+              break;
+            case 2:
+              consultarEstacionFeriados();
+              break;
+            default:
+              System.out.println("Invalid selection.");
+              break;
+}
+   
+}
+   void consultarEstacion()
+    {
+        System.out.println ("Por favor introduzca su ruta:");
+        String ruta = "";
+        Scanner entradaEscaner = new Scanner (System.in); //Creación de un objeto Scanner
+        ruta = entradaEscaner.nextLine (); //Invocamos un método sobre un objeto Scanner
+        System.out.println ("El numero de identidad que usted ha ingresado es: \"" + ruta +"\"");
+       
+       Ruta puntodeVotacion = new Ruta();
+       LugarDeEstacion = puntodeVotacion.sitiodeVotacion(ruta);
+       
+       System.out.println("su lugar de votacion es: " + LugarDeEstacion);
+    }
+  void consultarEstacionFeriados ()
+    {
+            System.out.println ("Los puntos de votacion con horario extendido son : salitre el greco y aguascalientes");
+    }
+
+}
